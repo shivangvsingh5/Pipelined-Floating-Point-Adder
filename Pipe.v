@@ -3,7 +3,6 @@ Sign    Exponent    Mentisa
  1          8           23      (bits)
 
 
-
 ADDER MODULE NAME: float_add_81
 MODULE PINS: 81
             INPUT: a81(32 bit),b81(32 bit), clk81, reset_81
@@ -64,7 +63,7 @@ module float_add_81 (result_81, a81, b81, clk81, reset_81);
             exp_b81 = b81[30:23];
             sign_a81 = a81 [31];                  //Sign
             sign_b81 = b81[31];
-            men_a81 = a81 [22:0];                 // Mentisa
+            men_a81 = a81 [22:0];                 // Mantissa
             men_b81 = b81 [22:0];
             fract_a81 = (zeroa81)?0:{ 2'b1, a81[22:0],zero_81[reg_81:25]};
             fract_b81 = (zerob81)?0:{ 2'b1, b81[22:0],zero_81[reg_81:25]};
@@ -75,7 +74,7 @@ module float_add_81 (result_81, a81, b81, clk81, reset_81);
         
         
         ///////////////////  STAGE 2    ///////////////////
-        // Take the data from the stage 1 and the shift the mentis by the differnce of the Exponent
+        // Take the data from the stage 1 and the shift the mantissa by the differnce of the Exponent
         
         if(exp_diff2_81 > 24) begin
             result_exp2_81 = exp_a2_81;
@@ -94,9 +93,9 @@ module float_add_81 (result_81, a81, b81, clk81, reset_81);
             
         end
          ///////////////////  STAGE 3    ///////////////////
-        // Take the data from the stage 2 and add or subtract the mentisa in this stage
+        // Take the data from the stage 2 and add or subtract the mantissa in this stage
         
-        
+   
         
         if (sign_a3_81 == sign_b3_81)begin
             fract_result3_81 = fract_a3_81 + fract_b3_81;
