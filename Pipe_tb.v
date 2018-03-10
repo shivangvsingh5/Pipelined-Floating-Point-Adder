@@ -7,7 +7,7 @@ wire[31:0] result_81;
 reg clk81, reset_81;
 float_add_81 X_81 (.a81(a81),.b81(b81),.result_81(result_81),.clk81(clk81),.reset_81(reset_81));
 
-initial begin               // CLOCK GENERATOR
+initial begin                               // CLOCK GENERATOR
 clk81 = 0;
 forever #5 clk81 = ~clk81;
 end
@@ -17,7 +17,7 @@ end
 initial
 begin
 
- $monitor ("a81 =%b,   b81 = %b,  result_81 =%b",a81,b81,result_81);            // DISPLAY RESULT IN SIMULATION
+ $monitor ("a81 =%b,   b81 = %b,  result_81 =%b",a81,b81,result_81);       // DISPLAY RESULT IN SIMULATION
 
 clk81 = 0;
 reset_81 = 0;
@@ -56,7 +56,6 @@ b81 = 32'b01000010110001100100000000000000;
 $finish;
 
 end
-
 
 initial begin 
 $dumpfile("add_pipe.vcd");
