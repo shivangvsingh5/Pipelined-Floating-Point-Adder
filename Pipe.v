@@ -2,15 +2,12 @@
 Sign    Exponent    Mentisa
  1          8           23      (bits)
 
-
 ADDER MODULE NAME: float_add_81
 MODULE PINS: 81
             INPUT: a81(32 bit),b81(32 bit), clk81, reset_81
             OUTPUT: result_81(32 bit)
 
-
 */
-
 
 
 module float_add_81 (result_81, a81, b81, clk81, reset_81);
