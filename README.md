@@ -1,1 +1,3 @@
 # Pipelined-Adder
+
+The main objective of this project is the learn the designing and implementation of a 5-stage pipelined IEEE single precision floating point adder. **IEEE** is the central and largest technical organization providing educational and technical advancements for electrical and electronic engineering peers worldwide. The floating-point representation is the representation in which a word is divided into 3 parts, which includes a **sign bit**, an **exponent** and a **fraction** part. Based on above knowledge and pre-defined rules for floating points, we are going to prepare a 5 - staged pipelined adder. The pipelining ahead of the IEEE format adds multiple features of utilizing the resources in a very systematic and useful convenient manner.
